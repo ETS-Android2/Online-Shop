@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.viewposter.ViewPosterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/view_poster_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple_500"
+        android:titleTextColor="@color/white">
+
+        <ImageButton
+            android:id="@+id/view_poster_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:onClick="viewPosterBackBtn"
+            android:src="@drawable/ic_left_arrow" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/view_poster_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/view_poster_toolbar">
+
+        <ImageView
+            android:id="@+id/view_poster_iv_poster_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_add_poster" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/view_poster_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/view_poster_image_layout"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/ic_money" />
+
+        <TextView
+            android:id="@+id/view_poster_tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="1000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/ic_white_phone" />
+
+        <TextView
+            android:id="@+id/view_poster_tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:text="+98 912 111 1111"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/view_poster_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_poster_details_layout"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Poster Name"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/view_poster_tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_poster_tv_name"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Description : "
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/view_poster_btn_call_owner"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view_poster_btn_view_owner_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:drawableLeft="@drawable/ic_white_phone"
+        android:onClick="callOwner"
+        android:text="Call Owner"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/view_poster_btn_view_owner_profile"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="30dp"
+        android:drawableLeft="@drawable/ic_white_eye"
+        android:onClick="viewOwnerProfile"
+        android:text="View Owner Profile"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

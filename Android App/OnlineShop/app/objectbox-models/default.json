@@ -1,0 +1,175 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:2112039578485954023",
+      "lastPropertyId": "12:733021719551661747",
+      "name": "Poster",
+      "properties": [
+        {
+          "id": "1:722481379416979288",
+          "name": "id",
+          "type": 6,
+          "flags": 131
+        },
+        {
+          "id": "2:7146013706712810718",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "5:3752284154121145613",
+          "name": "price",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "6:5527593011030200255",
+          "name": "posterGroup",
+          "type": 5,
+          "flags": 2
+        },
+        {
+          "id": "7:3796758596609953293",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "8:2807686834193939684",
+          "name": "priority",
+          "type": 5,
+          "flags": 4
+        },
+        {
+          "id": "9:7404996524674825592",
+          "name": "ownerId",
+          "indexId": "1:5596433946971884232",
+          "type": 11,
+          "flags": 1548,
+          "relationTarget": "User"
+        },
+        {
+          "id": "10:7576922379890403807",
+          "name": "owner_phone_number",
+          "type": 9
+        },
+        {
+          "id": "11:279388546492214157",
+          "name": "submissionDate",
+          "type": 10
+        },
+        {
+          "id": "12:733021719551661747",
+          "name": "poster_image",
+          "type": 23
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:790442390443076364",
+      "lastPropertyId": "17:8454189238631811136",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:7935320689755052281",
+          "name": "id",
+          "type": 6,
+          "flags": 131
+        },
+        {
+          "id": "2:1284593615890065283",
+          "name": "type",
+          "type": 5,
+          "flags": 2
+        },
+        {
+          "id": "3:4568299853946410580",
+          "name": "phone_number",
+          "type": 9
+        },
+        {
+          "id": "4:7935491413098586129",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "5:4871721138370740399",
+          "name": "password",
+          "type": 9
+        },
+        {
+          "id": "6:6397346542167864672",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "7:891734522790541509",
+          "name": "family",
+          "type": 9
+        },
+        {
+          "id": "11:8813958156003719168",
+          "name": "isConfirmed",
+          "type": 1,
+          "flags": 2
+        },
+        {
+          "id": "12:8227709677042768509",
+          "name": "signup_date",
+          "type": 10
+        },
+        {
+          "id": "14:425416745376370976",
+          "name": "avatar",
+          "type": 23
+        },
+        {
+          "id": "17:8454189238631811136",
+          "name": "posterscnt",
+          "type": 5,
+          "flags": 4
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:7846760042055400636",
+          "name": "bookmarks",
+          "targetId": "1:2112039578485954023"
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "3:4432736892325898307",
+  "lastIndexId": "1:5596433946971884232",
+  "lastRelationId": "2:6432076708933321114",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    4432736892325898307
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    519718393486451758,
+    3428216673400373760,
+    8796461816340210166,
+    4038147696910518705,
+    2546216551058099310,
+    4904470544237728264,
+    5439307663510821933,
+    6267703173086050539,
+    2676542778501731470,
+    5371472587087160038,
+    2633467490454970764,
+    3353951338608586108,
+    557514575641470312,
+    7153069349347491368
+  ],
+  "retiredRelationUids": [
+    6432076708933321114
+  ],
+  "version": 1
+}

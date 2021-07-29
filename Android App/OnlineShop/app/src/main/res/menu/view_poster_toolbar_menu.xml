@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Like"
+        android:id="@+id/view_poster_like"
+        android:icon="@drawable/ic_gray_heart"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:title="Change Priority"
+        android:id="@+id/view_poster_change_poster_priority"
+        android:visible="false"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="Edit"
+        android:id="@+id/view_poster_edit_poster"
+        android:visible="false"
+        app:showAsAction="never"/>
+
+    <item
+        android:title="Remove"
+        android:id="@+id/view_poster_remove_poster"
+        android:visible="false"
+        app:showAsAction="never"/>
+
+</menu>

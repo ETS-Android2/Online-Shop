@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.viewuser.ViewUserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/view_user_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/purple_500"
+            android:titleTextColor="@color/white">
+
+            <ImageButton
+                android:id="@+id/view_poster_btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/design_default_color_primary"
+                android:onClick="viewUserBackBtn"
+                android:src="@drawable/ic_left_arrow" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/view_user_upper_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/view_user_toolbar"
+            android:background="@color/orange">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/view_user_iv_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_default_avatar" />
+
+            <TextView
+                android:id="@+id/view_user_tv_fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="70dp"
+                android:layout_toRightOf="@id/view_user_iv_image"
+                android:text="Full Name"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/view_user_tv_posters_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_user_tv_fullname"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/view_user_iv_image"
+                android:text="total posters"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/view_user_btn_call_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_user_upper_layout"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/ic_white_phone"
+            android:onClick="callUser"
+            android:text="  Phone Number"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/view_user_btn_mail_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_user_btn_call_user"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:drawableLeft="@drawable/ic_white_mail"
+            android:onClick="mailUser"
+            android:text="  Email Address"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/view_user_rv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_user_btn_mail_user"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="User Posters:"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/view_user_rv_content_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_user_btn_mail_user"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:onClick="switchAdapter"
+            android:text="Logs"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/view_user_tv_empty_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_user_rv_content_switch"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:text="No Posters yet"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/view_user_rv_user_posters"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/view_user_rv_content_switch"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

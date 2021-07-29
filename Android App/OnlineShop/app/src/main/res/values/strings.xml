@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ILYA Shop</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="server_ip">127.0.0.1</string>
+
+    <string name="server_port">8080</string>
+
+    <string name="home_navigation_drawer_open">Open navigation drawer</string>
+    <string name="home_navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="poster">PosterObject</string>
+    <string name="poster_id">PosterID</string>
+
+    <string name="poster_group_prompt">Choose a category</string>
+
+    <string-array name="poster_group">
+        <item>Industrial</item>
+        <item>Cultural</item>
+        <item>Electronic</item>
+        <item>Furniture</item>
+        <item>Entertainment</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

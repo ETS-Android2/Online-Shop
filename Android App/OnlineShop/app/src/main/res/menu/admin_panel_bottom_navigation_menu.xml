@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/admin_panel_administration"
+        android:title="Administration"
+        android:enabled="true"
+        android:icon="@drawable/ic_admin"/>
+
+    <item
+        android:id="@+id/admin_panel_users_list"
+        android:title="Users"
+        android:enabled="true"
+        android:icon="@drawable/ic_users" />
+
+    <item
+        android:id="@+id/admin_panel_posters_list"
+        android:title="Posters"
+        android:enabled="true"
+        android:icon="@drawable/ic_posters" />
+
+</menu>

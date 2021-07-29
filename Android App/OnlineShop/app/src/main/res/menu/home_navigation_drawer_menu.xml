@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:id="@+id/home_navigation_drawer_options"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home_navigation_drawer_options_profile"
+            android:title="Profile"
+            android:icon="@drawable/ic_person"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/home_navigation_drawer_options_market"
+            android:title="Market"
+            android:icon="@drawable/ic_basket"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/home_navigation_drawer_options_my_posters"
+            android:icon="@drawable/my_posters"
+            android:title="My Posters"/>
+
+    </group>
+
+    <item
+        android:title="Actions"
+        android:id="@+id/home_navigation_drawer_actions">
+
+        <menu>
+
+            <item
+                android:id="@+id/home_navigation_drawer_actions_change_password"
+                android:icon="@drawable/ic_refresh"
+                android:title="Change Password"/>
+
+            <item
+                android:id="@+id/home_navigation_drawer_actions_remove_account"
+                android:icon="@drawable/ic_delete"
+                android:title="Remove Account"/>
+
+            <item
+                android:id="@+id/home_navigation_drawer_actions_log_out"
+                android:icon="@drawable/ic_white_exit"
+                android:title="Log out"/>
+
+        </menu>
+
+    </item>
+
+</menu>

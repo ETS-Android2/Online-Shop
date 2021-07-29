@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.addposter.AddPosterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/add_poster_iv_poster_image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="@color/gray"
+            android:layout_alignParentRight="true"
+            android:elevation="8dp"
+            android:src="@drawable/ic_add_poster" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_poster_ti_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_poster_iv_poster_image"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Name"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_poster_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_poster_tiet_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_poster_ti_price"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_poster_ti_name"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Price"
+            app:startIconDrawable="@drawable/ic_money">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_poster_tiet_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_poster_ti_poster_group"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_poster_ti_price"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:entries="@array/poster_group"
+            android:hint="Category"
+            app:startIconDrawable="@drawable/ic_category"
+            android:prompt="@string/poster_group_prompt">
+
+            <AutoCompleteTextView
+                android:id="@+id/add_poster_acet_poster_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"
+                android:text="Other" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TODO : Complete this part... -->
+
+        <RelativeLayout
+            android:id="@+id/add_poster_description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/add_poster_ti_poster_group"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/add_poster_imbtn_description_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="top|left"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_description" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/add_poster_ti_description"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/add_poster_imbtn_description_icon"
+                android:hint="Description"
+                app:counterEnabled="true"
+                app:counterMaxLength="250">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_poster_tiet_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_toRightOf="@+id/add_poster_imbtn_description_icon"
+                    android:inputType="textMultiLine"
+                    android:maxLength="250"
+                    android:maxLines="4" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/add_poster_btn_submit"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_poster_description_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Submit Poster"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</ScrollView>
